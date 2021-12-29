@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Git Hub Learning</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+body{
+    color: white;
+            background: url('pics/github.jpg');
+            overflow: scroll;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+     
+            background-attachment: fixed;
+}
+h3{
+    background-color: yellow;
+    color: black;
+}
+a:hover{
+    color: black;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  background-color: yellow;
+  color: red;
+  padding: 15px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  
+}
+
+.menu li:hover {
+  
+}
+
+
+
+.footer {
+  background-color: yellow;
+  color: black;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Git Hub Learning</h1>
+</div>
+
+<div class="row">
+  <div class="col-3 menu">
+    <ul>
+    <h3>1,2</h3>
+    <p>1: TO SET USERNAME AND PASSWORD<br>
+        -------------------------------------- <br>
+        git config --global user.name NAME <br>
+        git config --global user.email example@mail.com <br>
+        <br>
+        2: TO \CHECK USERNAME AND PASSWORD <br>
+        -------------------------------------- <br>
+        git config --global user.name <br>
+        git config --global user.email</p> <br>
+    <li><img src="pics/1,2.png" alt="to set user name and user email"></li>
+    <h3>3,4,5</h3>
+    <p>3: To initialize a repository: <br>
+        ------------------------------ <br>
+        $ git init <br>
+        RESULT: <br>
+            Initialized empty Git repository in 
+            C:/Users/zee/Desktop/git in one video cwh/.git/
+        <br> <br>
+        4: To check the hidden folders <br>
+        -------------------------------- <br>
+        ls -lart <br>
+            print the list of all folder including hidden folders <br><br>
+        5: To check the git status <br>
+        ---------------------------- <br>
+        $ git status <br>
+        RESULT: <br>
+            On branch master
+        
+            No commits yet
+        
+            Untracked files:
+              (use "git add <file>..." to include in what will be committed)
+                    git commands and notes.txt
+        
+            nothing added to commit but untracked files present (use "git add" to track)</p>
+            <br>
+    <li><img src="pics/3,4,5.PNG" alt=""></li>
+    <h3>6,7</h3>
+    <p>6: To transfer the file from untracked to Staged <br>
+        ---------------------------------------------- <br>
+        git add "git commands and notes.txt" <br><br>
+        
+        
+        7:	To commit the staged files 
+            (To transfer file from staged state to unmodified state) <br>
+        ------------------------------------------------------------------------------------ <br>
+        git commit <br>
+        RESULT: <br>
+            Vim editor will be opened
+                1: press i to INSERT
+                2: Write the commit notes ("Initial Commit")
+                3: Press 'ESC' and now type ':wq' and press Enter
+                4: Now run 'git status' command </p>
+    <li><img src="pics/6,7.PNG" alt=""></li>
+    <h3>8</h3>
+<p>8: To add more then one files from untracked to staged then press: <br>
+    ------------------------------------------------------------------ <br>
+    git add -A <br>
+        1. 	Now if you check the status you will see that files are now
+            in staged area and now you can commit the files to shift them
+            in unmodified phase. <br>
+            
+        2	Note: if you edit a already have a file in unmodified phase
+            and edit it then it is now in modified phase and not you will
+            have to shift to staged and then commit phase to take it back
+            to the unmodified phase.
+    </p> <br>
+    <li><img src="pics/8.PNG" alt=""></li>
+    <h3>9</h3>
+    <p>9: git commit -m "Enter your message here about the commit" <br>
+        -------------------------------------------------------------- <br>
+            It will commit the changes without opening the vim editor
+        </p> <br>
+    <li><img src="pics/9.PNG" alt=""></li>
+
+    <h3>10.1</h3>
+    <p>To take your modified file to the last commit stage (like :Ctrl+Z) <br>
+        ----------------------------------------------------------------------- <br>
+            git checkout Filename</p> <br>
+    <li><img src="pics/10.PNG" alt=""></li>
+    
+    <h3>10.2</h3>
+    <p>To take your modified file to the last commit stage (like :Ctrl+Z) <br>
+        ----------------------------------------------------------------------- <br>
+        git checkout -f (To checkout all files at once) 
+    </p> <br>
+    <li><img src="pics/10.1.PNG" alt=""></li>
+    <h3>11,13</h3>
+    <p>11: To view All the commits <br>
+        ------------------------------------------- <br>
+            git log //show all the commits
+                (press q to exit from git log)
+             </p><br>
+             <p>
+                13: To directly commit all modified staged files without adding
+                them to the staged area (note: you must have to add all the
+                files to the staged area at least once when you create them
+                and next time you can commit it after changes in it without
+                staging it. <br>
+            -------------------------------------------------------------------------- <br>
+                git commit -a -m "Type the commit message here"
+            
+             </p> <br>
+            
+    <li><img src="pics/11,13.PNG" alt=""></li>
+    <h3>11.1</h3>
+    <p>11: To view All the commits <br>
+        ------------------------------------------- <br>
+        git log -p -5 note: // show last 5(or any number you write) commits and also show the changes that were made
+
+    </p> <br>
+    <li><img src="pics/13.PNG" alt=""></li>
+    <h3>12</h3>
+    <p>12: Compare the working stage from the staged area  <br>
+        ---------------------------------------------------- <br>
+            git diff <br>
+            git diff --staged // compared staged stage with last commit
+        </p> <br>
+    <li><img src="pics/12.PNG" alt=""></li>
+    
+    <h3>14.1</h3>
+    <p>14: To remove some file from the commit <br>
+        ---------------------------------------------------- <br>
+            git rm --cached Filename //File will be removed from the staged and now it is untracked.
+        </p> <br>
+    <li><img src="pics/14.1.PNG" alt=""></li>
+    <h3>14.2</h3>
+    <p>
+
+        14: To remove some file from the commit <br>
+        ---------------------------------------------------- <br>
+        git rm Filename 		 //Completely delete a File
+    </p> <br>
+    <li><img src="pics/14.2.PNG" alt=""></li>
+    <h3>15</h3>
+    <p>
+
+        15: To check a short form of git status <br>
+        ----------------------------------------------------- <br>
+            git status -s <br>	
+            //red M shows in first column shows modified in working area <br>
+            //Green M shows in second column shows file is added Staged area <br>
+            // Green M in first column and Red M in second
+            column shows staged file is edited and now in untracked stage
+
+    </p> <br>
+    <li><img src="pics/15.PNG" alt=""></li>
+    <h3>16</h3>
+    <p>
+        16:	To ignore a file by git that git don't
+        track a or multiple files <br>
+        -------------------------------------- <br>
+    
+        1). Create a file with name .gitignore 
+            (note: create it from touch command i.e.
+                touch .gitignore
+                Because if you try to create it through the 
+                windows explorer then OS will save it and consider
+                it like a file with empty name and .gitignore
+                extension
+            ) <br>
+        2). Write the names of files in .gitignore file which you want
+            to be ignored in this project directry and add this file to 
+            the staged area. <br>
+        3). Whether that file is in same folder or in some child or
+            grandchild folder or up to so on , that file or the all files
+            with same name in any sub folder of the main project folder
+            will be ignored. <br>
+            -> 	igonore.log // will ignore all the ignore.log from all the
+                sub folders <br>
+            ->	*.log //will ignore all the files with extension .log <br>
+            ->	ignore/ 	//ignore all the files in ignore folder
+
+    </p> <br>
+    <li><img src="pics/16.PNG" alt=""></li>
+    <h3>17.1</h3>
+    <p>
+
+        
+17.1) Git Branch <br>
+-------------------------------------- <br>
+	To create a branch <br>
+		git branch Feature1
+		// A branch with the name Feature1 will be created
+		// By default you are in master branch (your main project)<br>
+	To switch between a branch <br>
+		git checkout feature1 
+		//you will be switched to feature1 branch (copy of your master branch)
+			
+    </p> <br>
+    <li><img src="pics/17.1.PNG" alt=""></li>
+    <h3>17.2</h3>
+    <p>
+        17.2) Git Branch <br>
+        -------------------------------------- <br>
+        To create and switch a branch at once, then run
+		->	git checkout -b features1 <br>
+			features1 is the name of new branch
+
+
+    </p>
+    <li><img src="pics/17.2.PNG" alt=""></li>
+    <h3>18</h3>
+    <p>
+
+        18). To add the remote directory to your local directory <br>
+--------------------------------------------------------- <br>
+	-> First create a github account <br>
+	-> Create a New Repository(remote repository) <br>
+	-> git remote add origin https://github.com/reponame/git-in-one-video.git 
+		(Copy and paste it in git bash and your git repository will be added as 'origin' <br>
+	-> Now run "git remote" to check the remote repository.<br>
+ 	-> git remote -v // will show the url of origin as well <br>
+	-> git push origin master (push the master branch to origin) <br>
+		--> note : it will not work if remote directory is private. <br>
+	-> Now you will have to generate an SSH key and add it to your master directory and then push <br>
+		-->ssh-keygen -t ed25519 -C "example@gmail.com" // SSh key will be generated and saved in a file <br>
+		-->eval "$(ssh-agent -s)" // produce agent process id
+			Agent pid 4652 // in my case agent pid
+			*we have added ssh private keey to ssh-agent <br>
+		-->cat ~/.ssh/id_ed25519.pub //your ssh key will be produced <br>
+		-->Copy it and paste it on your remote repository
+			settings->SSH key and GPG keys -> click new SSH key <br>
+		--> git push -u origin master //will push your repository to github remote repository you created. <br>
+		--> Only master branch will be pushed <br>
+		--> To push other branch as well first <br>
+			- switch to that branch i.e. git checkout feature1
+			- git push -u origin feature1
+	
+    </p>
+    <li><img src="pics/18.1.PNG" alt=""></li>
+    <h3>18.2</h3>
+    <li><img src="pics/18.2.PNG" alt=""></li>
+    <h3>18.3</h3>
+    <li> <img src="pics/18.3.PNG" alt=""></li>
+    </ul>
+  </div>
+</div>
+
+<div class="footer">
+  <a href="https://www.freecodecamp.org/news/git-and-github-for-beginners/">You can also clear your points</a>
+  <a href="https://www.freecodecamp.org/news/git-and-github-for-beginners/"> related video</a>
+  
+  
+
+</div>
+
+</body>
+</html>
